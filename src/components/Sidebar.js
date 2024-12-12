@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BBWLogo from '../images/logo-bbw.svg';
 
 function Sidebar() {
   return (
@@ -14,7 +14,7 @@ function Sidebar() {
         <li><a href="#children">Children&apos;s Page</a></li>
       </ul>
       <div className="sidebar-branding">
-        <img src="path-to-brand-logo.png" alt="Brand Logo" />
+        <img src={BBWLogo} alt="Brand Logo"/>
       </div>
     </aside>
   );
