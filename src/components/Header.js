@@ -1,12 +1,12 @@
 import React from 'react';
-
+import ZooLogo from '../images/zooh-logo-png-transparent.png';
 
 function Header() {
   return (
     <header className="header">
       <div className="logo-area">
         <img 
-          src=".\zooh-logo-png-transparent.png" 
+          src={ZooLogo} 
           alt="Zoo Logo" 
           className="zoo-logo"
         />
