@@ -1,0 +1,59 @@
+.tickets-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background: #e0e0e0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+  
+  .ticket-season {
+    background: #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .ticket-season h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .ticket-season table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .ticket-season th,
+  .ticket-season td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #999;
+    font-size: 0.9rem;
+  }
+  
+  .ticket-season th {
+    background: #ddd;
+    font-weight: bold;
+  }
+  
+  .ticket-season tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .ticket-season td:last-child {
+    text-align: center;
+  }
+  
+  .ticket-season svg {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
