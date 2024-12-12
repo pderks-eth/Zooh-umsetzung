@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #e0e0e0;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #555;
+  color: #fff;
+  padding: 0.5rem 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-area {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.zoo-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.top-nav a {
+  margin: 0 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #777;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.header-icon {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* Content Container */
+.content-container {
+  flex: 1;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #444;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.sidebar-list li a:hover {
+  background: #666;
+}
+
+.sidebar-list li a svg {
+  margin-right: 0.5rem;
+}
+
+.sidebar-branding {
+  text-align: center;
+  padding: 1rem;
+}
+
+.sidebar-branding img {
+  max-width: 100px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background: #f0f0f0;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.intro-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.animal-banners {
+  display: flex;
+  gap: 1rem;
+}
+
+.animal-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Events Section */
+.events-section h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.event-image-container img {
+  width: 100%;
+  display: block;
+}
+
+.event-info {
+  padding: 0.5rem;
+}
+
+.event-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
 }
