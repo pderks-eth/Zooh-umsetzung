@@ -29,7 +29,6 @@ function App() {
             <Route path="/fotospots" element={<Fotospots />} />
             <Route path="/waiting" element={<WaitingTimeTracking />} />
             <Route path="/food" element={<Food />} />
-            <Route path="/children" element={<ChildrenPage />} />
           </Routes>
         </div>
       </div>
