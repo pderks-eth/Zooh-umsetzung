@@ -10,7 +10,6 @@ import Tickets from './components/Tickets';
 import Fotospots from './components/Fotospots';
 import WaitingTimeTracking from './components/WaitingTimeTracking';
 import Food from './components/Food';
-import ChildrenPage from './components/ChildrenPage';
 
 function App() {
   return (
