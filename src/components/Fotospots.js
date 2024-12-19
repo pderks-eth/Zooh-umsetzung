@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Fotospots.css';
-// import SnakeImage from '../images/snake.jpg'; // Beispielbildpfad anpassen
+import SnakeImage from '../images/Snake.png'; 
 
 function Fotospots() {
   return (
@@ -38,7 +38,7 @@ function Fotospots() {
         </div>
 
         <div className="fotospots-image-container">
-          {/* <img src={SnakeImage} alt="Snake" className="fotospots-image" /> */}
+          <img src={SnakeImage} alt="Snake" className="fotospots-image" />
         </div>
       </div>
     </div>

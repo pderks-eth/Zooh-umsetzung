@@ -1,0 +1,64 @@
+.waitingtime-container {
+    padding: 2rem;
+    background: #e0e0e0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .waitingtime-container h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .waitingtime-list {
+    background: #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .waitingtime-item {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .waitingtime-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .waitingtime-name {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .waitingtime-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .waitingtime-status {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .waitingtime-button {
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .waitingtime-button:hover {
+    background: #bbb;
+  }
+  
