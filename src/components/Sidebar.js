@@ -5,13 +5,13 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <ul className="sidebar-list">
-        <li><a href="#general">General</a></li>
-        <li><a href="#zoomap">Zoo Map</a></li>
-        <li><a href="#tickets">Tickets</a></li>
-        <li><a href="#fotospots">Fotospots</a></li>
-        <li><a href="#waiting">Waiting Time Tracking</a></li>
-        <li><a href="#food">Food</a></li>
-        <li><a href="#children">Children&apos;s Page</a></li>
+        <li><Link to="/">General</Link></li>
+        <li><Link to="/zoomap">Zoo Map</Link></li>
+        <li><Link to="/tickets">Tickets</Link></li>
+        <li><Link to="/fotospots">Fotospots</Link></li>
+        <li><Link to="/waiting">Waiting Time Tracking</Link></li>
+        <li><Link to="/food">Food</Link></li>
+        <li><Link to="/children">Children&apos;s Page</Link></li>
       </ul>
       <div className="sidebar-branding">
         <img src={BbwLogo} alt='BBW Logo'/>

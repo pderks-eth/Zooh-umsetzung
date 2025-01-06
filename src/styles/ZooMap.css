@@ -1,0 +1,30 @@
+.zoo-map-container {
+    padding: 1rem;
+    background: #e0e0e0; /* passt zur Hintergrundfarbe des restlichen Layouts */
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto; /* Falls die Karte größer ist als der Bildschirm */
+  }
+  
+  .zoo-map-container h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .zoo-map-content {
+    background: #ccc; /* leichte Hintergundfarbe, um die Karte hervorzuheben */
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Karte zentrieren */
+    align-items: center;
+  }
+  
+  .zoo-map-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* leichter Schatten */
+  }
+  
