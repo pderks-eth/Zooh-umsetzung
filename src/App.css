@@ -51,6 +51,7 @@ body, html {
   color: #fff;
   margin-right: 1rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .header-icon {
@@ -67,7 +68,7 @@ body, html {
 /* Sidebar */
 .sidebar {
   display: none;
-  width: 250px;
+  width: 230px;
   background: #444;
   color: #fff;
   padding: 1rem 0;

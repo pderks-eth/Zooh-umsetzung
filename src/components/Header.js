@@ -1,5 +1,5 @@
 import React from 'react';
-import ZooLogo from '../images/zooh-logo-png-transparent.png';
+import ZooLogo from '../images/logo.png';
 
 function Header({toggleFunk}) {  
   return (
