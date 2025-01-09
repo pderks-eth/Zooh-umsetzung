@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -12,10 +12,17 @@ import WaitingTimeTracking from './components/WaitingTimeTracking';
 import Food from './components/Food';
 
 function App() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+
+  const toggleFunk = () => {
+    setIsSidebarVisible((prev) => !prev);
+  }  
+
   return (
     <Router>
       <div className="app-container">
-        <Header />
+        <Header toggleFunk={toggleFunk} />
+        {isSidebarVisible && <Sidebar />}
         <div className="content-container">
           <Sidebar />
           <Routes>

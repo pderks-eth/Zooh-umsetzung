@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
+import BbwLogo from '../images/bbw_logo.png'; 
+ 
 function Sidebar() {
   return (
-    <aside className="sidebar">
+    <aside id="sidebar" className="sidebar">
       <ul className="sidebar-list">
         <li><Link to="/">General</Link></li>
         <li><Link to="/zoomap">Zoo Map</Link></li>
@@ -14,10 +14,10 @@ function Sidebar() {
         <li><Link to="/food">Food</Link></li>
       </ul>
       <div className="sidebar-branding">
-        <img src="path-to-brand-logo.png" alt="Brand Logo" />
+        <img src={BbwLogo} alt="BBW Logo" />
       </div>
     </aside>
   );
 }
-
+ 
 export default Sidebar;
