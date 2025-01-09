@@ -21,22 +21,23 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <Header toggleFunk={toggleFunk} />
-        {isSidebarVisible && <Sidebar />}
-        <div className="content-container">
-          <Sidebar />
-          <Routes>
-            {/* Home (General) */}
-            <Route path="/" element={<MainContent />} />
+        <div><Header toggleFunk={toggleFunk} /></div>
+          <div className="content-container">
             
-            {/* Weitere Seiten */}
-            <Route path="/zoomap" element={<ZooMap />} />
-            <Route path="/tickets" element={<Tickets />} />
-            <Route path="/fotospots" element={<Fotospots />} />
-            <Route path="/waiting" element={<WaitingTimeTracking />} />
-            <Route path="/food" element={<Food />} />
-          </Routes>
-        </div>
+            {isSidebarVisible && <Sidebar />}
+
+            <Routes>
+              {/* Home (General) */}
+              <Route path="/" element={<MainContent />} />
+
+              {/* Weitere Seiten */}
+              <Route path="/zoomap" element={<ZooMap />} />
+              <Route path="/tickets" element={<Tickets />} />
+              <Route path="/fotospots" element={<Fotospots />} />
+              <Route path="/waiting" element={<WaitingTimeTracking />} />
+              <Route path="/food" element={<Food />} />
+            </Routes>
+          </div>
       </div>
     </Router>
   );

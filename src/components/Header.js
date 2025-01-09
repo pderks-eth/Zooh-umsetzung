@@ -18,12 +18,9 @@ function Header({toggleFunk}) {
           <a href="#fotospots">Fotospots</a>
           <a href="#waiting">Waiting Time</a>
           <a href="#food">Food</a>
-<<<<<<< HEAD
         </nav>
-=======
           <a href="#children">Children</a>
         </nav> */}
->>>>>>> bb600681b617798207e9a7e293067f0b999778f9
       </div>
       <div className="header-actions">
         <button className="logout-btn">Log Out</button>
