@@ -12,7 +12,6 @@ function Sidebar() {
         <li><Link to="/fotospots">Fotospots</Link></li>
         <li><Link to="/waiting">Waiting Time Tracking</Link></li>
         <li><Link to="/food">Food</Link></li>
-        <li><Link to="/children">Children&apos;s Page</Link></li>
       </ul>
       <div className="sidebar-branding">
         <img src="path-to-brand-logo.png" alt="Brand Logo" />

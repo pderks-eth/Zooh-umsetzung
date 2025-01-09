@@ -18,7 +18,6 @@ function Header() {
           <a href="#fotospots">Fotospots</a>
           <a href="#waiting">Waiting Time</a>
           <a href="#food">Food</a>
-          <a href="#children">Children</a>
         </nav>
       </div>
       <div className="header-actions">
