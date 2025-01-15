@@ -11,7 +11,7 @@ function Sidebar() {
         <li><Link to="/tickets">Tickets</Link></li>
         <li><Link to="/fotospots">Fotospots</Link></li>
         <li><Link to="/waiting">Waiting Time Tracking</Link></li>
-        <li><Link to="/food">Food</Link></li>
+        <li><Link to="/food">Food and Drinks</Link></li>
       </ul>
       <div className="sidebar-branding">
         <img src={BbwLogo} alt="BBW Logo" />

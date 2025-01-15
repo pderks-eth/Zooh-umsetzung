@@ -102,7 +102,7 @@ body, html {
 }
 
 .sidebar-branding {
-  text-align: center;
+  text-align: start;
   padding: 1rem;
 }
 
