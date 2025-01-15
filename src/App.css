@@ -65,6 +65,10 @@ body, html {
   display: flex;
 }
 
+.centered-content {
+  justify-content: center;
+}
+
 /* Sidebar */
 .sidebar {
   display: none;

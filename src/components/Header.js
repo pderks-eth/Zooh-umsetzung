@@ -1,7 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ZooLogo from '../images/logo.png';
 
-function Header({toggleFunk}) {  
+function Header({ setLoggedIn}) {  
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // State auf false setzen
+    setLoggedIn(false);
+
+    // Optional: Nach dem Logout zur Login-Seite navigieren
+    navigate('/login');
+  };
+
   return (
     <header className="header">
       <div id="zoo-logo" onClick={toggleFunk} className="logo-area">
@@ -23,7 +34,7 @@ function Header({toggleFunk}) {
         </nav> */}
       </div>
       <div className="header-actions">
-        <button className="logout-btn">Log Out</button>
+      <button className="logout-btn" onClick={handleLogout}>Log Out</button>
       </div>
     </header>
     
