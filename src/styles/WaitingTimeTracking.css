@@ -56,9 +56,10 @@
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     cursor: pointer;
+    flex-shrink: 0;
+    margin-left: auto;
   }
   
   .waitingtime-button:hover {
     background: #bbb;
   }
-  

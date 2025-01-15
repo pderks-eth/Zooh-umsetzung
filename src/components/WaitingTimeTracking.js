@@ -1,18 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/WaitingTimeTracking.css';
-import { FiRadio } from 'react-icons/fi'; // Beispiel: einfacher Kreis als Icon
+import { FiRadio } from 'react-icons/fi';
 
 function WaitingTimeTracking() {
-  // Beispiel-Daten
-  const areas = [
-    { name: 'Panterra', status: 'Frei' },
-    { name: 'Affen Welt', status: '1 registrierte Person' },
-    { name: 'Terrarium', status: '3 registrierte Personen' },
-    { name: 'Savanne', status: '15 registrierte Personen' },
-    { name: 'Elefantenpark', status: '25 registrierte Personen' },
-    { name: 'Zoolino', status: '30 registrierte Personen' },
-    { name: 'Afrika', status: '45 registrierte Personen' },
+  const initialAreas = [
+    { name: 'Panterra', status: 'Frei', count: 0, isJoined: false },
+    { name: 'Affen Welt', status: '1 registrierte Person', count: 1, isJoined: false },
+    { name: 'Terrarium', status: '3 registrierte Personen', count: 3, isJoined: false },
+    { name: 'Savanne', status: '15 registrierte Personen', count: 15, isJoined: false },
+    { name: 'Elefantenpark', status: '25 registrierte Personen', count: 25, isJoined: false },
+    { name: 'Zoolino', status: '30 registrierte Personen', count: 30, isJoined: false },
+    { name: 'Afrika', status: '45 registrierte Personen', count: 45, isJoined: false },
   ];
+
+  const [areas, setAreas] = useState(initialAreas);
+
+  // Function to handle "Bin dabei!" click
+  const handleJoin = (index) => {
+    setAreas((prevAreas) => {
+      const updatedAreas = [...prevAreas];
+      updatedAreas[index].count += 1;
+      updatedAreas[index].status =
+        updatedAreas[index].count === 1 ? `${updatedAreas[index].count} registrierte Person` : `${updatedAreas[index].count} registrierte Personen`;
+      updatedAreas[index].isJoined = true; // Mark as joined
+      return updatedAreas;
+    });
+  };
+
+  // Function to handle "Bin doch nicht dabei!" click
+  const handleLeave = (index) => {
+    setAreas((prevAreas) => {
+      const updatedAreas = [...prevAreas];
+      updatedAreas[index].count = Math.max(0, updatedAreas[index].count - 1); // Prevent negative count
+      updatedAreas[index].status =
+        updatedAreas[index].count === 1 ? `${updatedAreas[index].count} registrierte Person` : `${updatedAreas[index].count} registrierte Personen`;
+      updatedAreas[index].isJoined = false; // Mark as not joined
+      return updatedAreas;
+    });
+  };
 
   return (
     <div className="waitingtime-container">
@@ -25,7 +50,21 @@ function WaitingTimeTracking() {
               <span>{area.name}</span>
             </div>
             <div className="waitingtime-status">{area.status}</div>
-            <button className="waitingtime-button">Bin dabei!</button>
+            {area.isJoined ? (
+              <button
+                className="waitingtime-button leave-button"
+                onClick={() => handleLeave(index)}
+              >
+                Bin doch nicht dabei!
+              </button>
+            ) : (
+              <button
+                className="waitingtime-button join-button"
+                onClick={() => handleJoin(index)}
+              >
+                Bin dabei!
+              </button>
+            )}
           </div>
         ))}
       </div>
