@@ -11,12 +11,12 @@ import FoodStallsImg from '../images/verpflegungsstände.jpg';
 
 function Food() {
   const foodPlaces = [
-    { name: 'Restaurant Pantanal', img: PantanalImg },
-    { name: 'Restaurant Masoala', img: MasoalaImg },
-    { name: 'Restaurant Altes Klösterli', img: KloesterliImg },
-    { name: 'Zoocafé', img: ZoocafeImg },
-    { name: 'Thai Lodge', img: ThaiLodgeImg },
-    { name: 'Food Stalls', img: FoodStallsImg }
+    { name: 'Restaurant Pantanal', img: PantanalImg, href: "https://www.zoo.ch/en/food-drinks/restaurant-pantanal"},
+    { name: 'Restaurant Masoala', img: MasoalaImg, href: "https://www.zoo.ch/en/food-drinks/restaurant-masoala" },
+    { name: 'Restaurant Altes Klösterli', img: KloesterliImg, href: "https://www.zoo.ch/en/food-drinks/restaurant-altes-klosterli" },
+    { name: 'Zoocafé', img: ZoocafeImg, href: "https://www.zoo.ch/en/food-drinks/zoocafe" },
+    { name: 'Thai Lodge', img: ThaiLodgeImg, href: "https://www.zoo.ch/en/thai-lodge" },
+    { name: 'Food Stalls', img: FoodStallsImg, href: "https://www.zoo.ch/en/food-drinks/food-stalls" }
   ];
 
   return (
@@ -24,7 +24,7 @@ function Food() {
       <h1>Essen &amp; Trinken</h1>
       <div className="food-grid">
         {foodPlaces.map((place, index) => (
-          <div className="food-item" key={index}>
+          <div className="food-item" key={index} onClick={() => window.location.href = place.href}>
             <img src={place.img} alt={place.name} className="food-image" />
             <div className="food-name">{place.name}</div>
           </div>

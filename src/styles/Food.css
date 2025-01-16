@@ -21,6 +21,8 @@
   }
   
   .food-item {
+    cursor: pointer;
+    user-select: none;
     background: #ccc;
     border-radius: 5px;
     padding: 1rem;
