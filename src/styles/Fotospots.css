@@ -21,9 +21,10 @@
 }
 
 .fotospots-text {
-  list-style-type: '› ';
-  flex: 1 1 60%;
-  min-width: 300px;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .fotospots-text li {
@@ -32,13 +33,14 @@
 }
 
 .fotospots-text h2 {
+  content: '›';
   font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .general-notes.visible {
-  display: block;
+  display: flex !important;
   max-height: 500px;
   opacity: 1;
 }
@@ -54,6 +56,16 @@
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.general-notes .fotospots-text {
+  flex: 1;
+  order: 1;
 }
 
 .general-notes li {
@@ -65,14 +77,14 @@
 .general-notes li::before,
 .additional-notes li::before {
   font-weight: bold;
+  font-size: 1.2rem;
+  color: #000;
+  margin-right: 0.5rem;
 }
 
 .fotospots-image-container {
-  position: fixed;
-  top: 5.1rem;
-  right: 2rem;
-  width: 300px;
-  z-index: 1;
+  flex: 0 0 300px;
+  order: 2;
 }
 
 .fotospots-image {
